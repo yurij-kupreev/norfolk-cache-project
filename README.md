@@ -3,9 +3,9 @@
 
 # Getting Started
 The project structure:
-- (NorfolkCache)[NorfolkCache] - an ASP.NET MVC application that runs on .NET Framework version 4.6.1.
-- (ApiTests)[ApiTests] - a set of API tests that are built using chakram/mocha.
-- (LoadTests)[LoadTests] - a set of load tests and initial data. 
+- [NorfolkCache](NorfolkCache) - an ASP.NET MVC application that runs on .NET Framework version 4.6.1.
+- [ApiTests](ApiTests) - a set of API tests that are built using chakram/mocha.
+- [LoadTests](LoadTests) - a set of load tests and initial data. 
 
 Branches:
 - *development* - an unstable development branch.
@@ -29,7 +29,7 @@ npm tests
 ```
 
 # Build and Test
-Open ASP.NET MVC solution file (NorfolkCache)[NorfolkCache\NorfolkCache.sln] with Visual Studio 2015 or Visual Studion 2017.
+Open ASP.NET MVC solution file [NorfolkCache](NorfolkCache\NorfolkCache.sln) with Visual Studio 2015 or Visual Studion 2017.
 
 # 1. Practical Task "Web Apps"
 The goal of this task is to create a set of App Services for three different environments:
@@ -52,7 +52,7 @@ Please, use your own prefix name instead of *my* to avoid name conflicts.
 	* Run API tests for this host.
 	* Open "Diagnostics logs" and enable filesystem application logging (Information level), web server logging, and detailed error messages. ([Learn about troubleshooting a web app in Azure](https://docs.microsoft.com/en-us/azure/app-service/web-sites-dotnet-troubleshoot-visual-studio).)
 	* Open "Log stream" go to "Application logs" and run API tests.
-	* Open "Log stream", go to "Web server logs" and run API tests. (["Enable diagnostics logging"](https://docs.microsoft.com/en-us/azure/app-service/web-sites-enable-diagnostic-log).)
+	* Open "Log stream", go to "Web server logs" and run API tests. (["Enable diagnostics logging""](https://docs.microsoft.com/en-us/azure/app-service/web-sites-enable-diagnostic-log).)
 
 Questions:
 
