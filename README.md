@@ -1,17 +1,25 @@
 # Introduction 
+
 *Norfolk Cache* is a simple key-value storage application designed for Azure Mentoring program. This guide contains a bunch of practical tasks that will help mentees successfully complete the program.
 
 # Getting Started
 
+Fork this repository to create your own copy that you will use in this program. 
+
+
 ## Project Structure
+
 - [NorfolkCache](NorfolkCache) - an ASP.NET MVC application that runs on .NET Framework version 4.6.1.
 - [ApiTests](ApiTests) - a set of API tests that are built using chakram/mocha.
 - [LoadTests](LoadTests) - a set of load tests and initial data. 
 
+
 ## Environment Branches
+
 - *development* - an unstable development branch for Continuous Integration environment.
 - *master* - a stable production-ready branch for UAT environment.
 - *release* - a stable release branch for Production environment.
+
 
 ## Development Workflow
 - Developers work on a feature using it's own feature branch.
@@ -19,10 +27,11 @@
 - When the feature is tested and verified by QA on Continuous Integration environment the feature changes are merged to master branch.
 - When the feature is tested and verified by the UAT acceptance group the feature changes are merged to the release branch.  
 
-Fork this repository to create your own copy that you will use in this program. 
 
 # Build and Test
+
 Open ASP.NET MVC solution file [NorfolkCache](NorfolkCache\NorfolkCache.sln) with Visual Studio 2015 or Visual Studion 2017.
+
 
 ## Run API tests
 
@@ -34,6 +43,7 @@ notepad test\tests.js
 npm tests
 ```
 
+
 # 1. Practical Task "Web Apps"
 The goal of this task is to create a set of App Services for three different environments:
 - *my-norfolk-cache-ci* - a unstable CI environment with the latest version of **development** branch.
@@ -42,7 +52,9 @@ The goal of this task is to create a set of App Services for three different env
 
 Please, use your own prefix name instead of *my* to avoid name conflicts.
 
+
 ## Solution 1
+
 1. Create a new resource group *my-norfolk-cache*. (["Azure Resource Manager"](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview).)
 2. Create a new *my-norfolk-cache-ci* web app in *my-norfolk-cache* resource group with new app service plan *my-norfolk-cache-ci-plan* (free pricing tier, any location).
 3. Create a new *my-norfolk-cache-uat* web app in *my-norfolk-cache* resource group with new app service plan *my-norfolk-cache-uat-plan* (free pricing tier, any location).
@@ -57,7 +69,8 @@ Please, use your own prefix name instead of *my* to avoid name conflicts.
 	* Open "Log stream" go to "Application logs" and run API tests.
 	* Open "Log stream", go to "Web server logs" and run API tests. (["Enable diagnostics logging""](https://docs.microsoft.com/en-us/azure/app-service/web-sites-enable-diagnostic-log).)
 
-Questions:
+
+## Questions
 
 1. What is a resource group location?
 2. What plan do you need to have deployment slots for your web app?
