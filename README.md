@@ -2,15 +2,16 @@
 *Norfolk Cache* is a simple key-value storage application designed for Azure Mentoring program. This guide contains a bunch of practical tasks that will help mentees successfully complete the program.
 
 # Getting Started
-The project structure:
+
+## Project Structure
 - [NorfolkCache](NorfolkCache) - an ASP.NET MVC application that runs on .NET Framework version 4.6.1.
 - [ApiTests](ApiTests) - a set of API tests that are built using chakram/mocha.
 - [LoadTests](LoadTests) - a set of load tests and initial data. 
 
-Branches:
-- *development* - an unstable development branch.
-- *master* - a stable production-ready branch.
-- *release* - a stable release branch.
+## Environment Branches
+- *development* - an unstable development branch for Continuous Integration environment.
+- *master* - a stable production-ready branch for UAT environment.
+- *release* - a stable release branch for Production environment.
 
 ## Development Workflow
 - Developers work on a feature using it's own feature branch.
