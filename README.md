@@ -24,12 +24,9 @@ Open ASP.NET MVC solution file (NorfolkCache)[NorfolkCache\NorfolkCache.sln] wit
 
 # Practical Task "Web Apps"
 The goal of this task is to create a set of App Services for three different environments:
-
-	* *my-norfolk-cache-ci* - a unstable CI environment with the latest version of **development** branch.
-
-	* *my-norfolk-cache-uat* - a stable UAT environment with the latest version of **master** branch.
-
-	* *my-norfolk-cache* - a stable production environment with the latest version of **release** branch.
+* *my-norfolk-cache-ci* - a unstable CI environment with the latest version of **development** branch.
+* *my-norfolk-cache-uat* - a stable UAT environment with the latest version of **master** branch.
+* *my-norfolk-cache* - a stable production environment with the latest version of **release** branch.
 
 Please, use your own prefix name instead of *my* to avoid name conflicts.
 
