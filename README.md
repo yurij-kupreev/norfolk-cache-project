@@ -1,5 +1,5 @@
 # Introduction 
-*Norfolk Cache* is a simple key-value storage application designed for Azure Mentoring program.
+*Norfolk Cache* is a simple key-value storage application designed for Azure Mentoring program. This guide contains a bunch of practical tasks that will help mentees successfully complete the program.
 
 # Getting Started
 The project structure:
@@ -19,17 +19,18 @@ Workflow:
 
 Fork this repository to create your own copy that you will use in this program. 
 
-Running API tests
+# Build and Test
+Open ASP.NET MVC solution file [NorfolkCache](NorfolkCache\NorfolkCache.sln) with Visual Studio 2015 or Visual Studion 2017.
+
+## Run API tests
+
 ```sh
 cd ApiTests
 npm install
-rem Set hosname
+rem Replace host in urlBase with relevant environment host in test\tests.js. 
 notepad test\tests.js
 npm tests
 ```
-
-# Build and Test
-Open ASP.NET MVC solution file [NorfolkCache](NorfolkCache\NorfolkCache.sln) with Visual Studio 2015 or Visual Studion 2017.
 
 # 1. Practical Task "Web Apps"
 The goal of this task is to create a set of App Services for three different environments:
@@ -40,7 +41,7 @@ The goal of this task is to create a set of App Services for three different env
 Please, use your own prefix name instead of *my* to avoid name conflicts.
 
 ## Solution 1
-1. Create a new resource group *my-norfolk-cache*. (Learn more about (Azure Resource Manager)[https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview].)
+1. Create a new resource group *my-norfolk-cache*. (["Azure Resource Manager"](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview).)
 2. Create a new *my-norfolk-cache-ci* web app in *my-norfolk-cache* resource group with new app service plan *my-norfolk-cache-ci-plan* (free pricing tier, any location).
 3. Create a new *my-norfolk-cache-uat* web app in *my-norfolk-cache* resource group with new app service plan *my-norfolk-cache-uat-plan* (free pricing tier, any location).
 4. Create a new *my-norfolk-cache* web app in *my-norfolk-cache* resource group with new app service plan *my-norfolk-cache-plan* (free pricing tier, any location).
