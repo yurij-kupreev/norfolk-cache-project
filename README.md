@@ -65,23 +65,25 @@ Please, use your own prefix name instead of *my* to avoid name conflicts.
 
 5. Setup deployment for *my-norfolk-cache-ci* web app:
 	* Open "Deployment slots" tab and learn information on this page.
-	* Open "Deployment options" tab and add github deployment for **development** branch.
+	* Open "Deployment options" tab and add github deployment for **development** branch. Wait until the app will be deployed.
+	* Open "Activity log" and find "Update website" operation in the log.
 
 6. Gain more information about your *my-norfolk-cache-ci*:
 	* Open "Overview" tab and open a web app url - http://my-norfolk-cache-ci.azurewebsites.net.
 	* Learn about "Quotas" for this web app. (["Monitor Apps"](https://docs.microsoft.com/en-us/azure/app-service/web-sites-monitor).)
 	* Run API tests for this host and learn how this affect quotas.
 
-7. View diagnostics logs:
-	* Open "Diagnostics logs" and enable filesystem application logging (Information level), web server logging, and detailed error messages. ([Learn about troubleshooting a web app in Azure](https://docs.microsoft.com/en-us/azure/app-service/web-sites-dotnet-troubleshoot-visual-studio).)
-	* Open "Log stream" go to "Application logs" and run API tests. - no results?
-	* Open "Log stream", go to "Web server logs" and run API tests. (["Enable diagnostics logging"](https://docs.microsoft.com/en-us/azure/app-service/web-sites-enable-diagnostic-log).) - no results?
-
-8. View detailed information about processes:
+7. View detailed information about processes:
 	* Open "Process explorer" and learn more about w3wp processes: PID, threads, working set, private memory, open handles, loaded modules.
 	* Open Site Configuration Console (SCM) or Kudu for this web app - https://my-norfolk-cache-ci.scm.azurewebsites.net/. (["Accessing the Kudu Service"](https://github.com/projectkudu/kudu/wiki/Accessing-the-kudu-service).)
 	* Use REST API to get information about all processes - https://my-norfolk-cache-ci.scm.azurewebsites.net/api/diagnostics/processes/.
 	* Use REST API to get information about a specific process - https://my-norfolk-cache-ci.scm.azurewebsites.net/api/diagnostics/processes/process-id.
+
+8. View diagnostics logs:
+	* Open "Diagnostics logs" and enable filesystem application logging (Information level), web server logging, and detailed error messages. ([Learn about troubleshooting a web app in Azure](https://docs.microsoft.com/en-us/azure/app-service/web-sites-dotnet-troubleshoot-visual-studio).)
+	* Open "Log stream" go to "Application logs" and run API tests. - no results?
+	* Open "Log stream", go to "Web server logs" and run API tests. (["Enable diagnostics logging"](https://docs.microsoft.com/en-us/azure/app-service/web-sites-enable-diagnostic-log).) - no results?
+	* Open Kudu, download a web app diagnostic dump using Tools->Diagnostic dump.
 
 9. Restarting web app.
 	* Run API tests, and open the web app url.
@@ -101,15 +103,27 @@ $ type Web.config
 
 11. Setup deployment for *my-norfolk-cache-uat* web app.
 	* Use Github's **master** branch.
-	* Enable application logging, Information level. Use filesystem as a storage.
+	* Enable application logging, Warning level. Use filesystem as a storage.
 	* Review web app quotas.
 	* Run API tests for this environment.
 
 12. Setup deployment for *my-norfolk-cache* web app.
 	* Use Github's **release** branch.
-	* Enable application logging, Error level. Use blob as a storage.
+	* Enable application logging, Error level. Use blob as a storage (applogs and webserverlogs are containers for application and server logs accordingly).
 	* Review web app quotas.
 	* Run API tests for this environment.
+
+13. Setup performance testing for UAT environment:
+	* Enable Performance Test (VSTS account is needed). Test parameters:
+		* Url: http://my-norfolk-cache-uat.azurewebsites.net/api/cache/namespaces
+		* Performance Test name: PerfTestMyNorfolkCacheUat.
+		* User Load: 40
+		* Duration: 1
+	* Synchronize your web app with repository after this changes. Wait.
+	* Open "Overview" - "Requests", "Average Response Time" and "Data Out" charts.
+	* Open "Deployment options" and click on deployment details. Click on "View Log" link for "Performance Test" activity. Learn messages, and test results.
+	* Open "Performance test" and on the test run - you will get on the same page.
+	* Open your VSTS account, click on "Test" menu item, then "Load test".
 
 
 ## Questions
