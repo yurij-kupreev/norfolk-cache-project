@@ -3,25 +3,19 @@
 
 # Getting Started
 The project structure:
-	* (NorfolkCache)[NorfolkCache] - an ASP.NET MVC application that runs on .NET Framework version 4.6.1.
-
-	* (ApiTests)[ApiTests] - a set of API tests that are built using chakram/mocha.
-
-	* (LoadTests)[LoadTests] - a set of load tests and initial data. 
+* (NorfolkCache)[NorfolkCache] - an ASP.NET MVC application that runs on .NET Framework version 4.6.1.
+* (ApiTests)[ApiTests] - a set of API tests that are built using chakram/mocha.
+* (LoadTests)[LoadTests] - a set of load tests and initial data. 
 
 Branches:
-	* *development* - an unstable development branch.
-
-	* *master* - a stable production-ready branch.
-
-	* *release* - a stable release branch.
+* *development* - an unstable development branch.
+* *master* - a stable production-ready branch.
+* *release* - a stable release branch.
 
 Workflow:
-	* Developers work on a feature using it's own feature branch. When the feature is completed a responsible developer merges the feature branch to *development* branch.
-
-	* All features that are deployed and verified on CI environment are merged to master branch using a special schedule.
-
-	* All features that are deployed to CI environment are merged to the release branch according to a release schedule.  
+* Developers work on a feature using it's own feature branch. When the feature is completed a responsible developer merges the feature branch to *development* branch.
+* All features that are deployed and verified on CI environment are merged to master branch using a special schedule.
+* All features that are deployed to CI environment are merged to the release branch according to a release schedule.  
 
 Fork this repository to create your own copy that you will use in this program. 
 
