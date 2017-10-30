@@ -12,10 +12,11 @@ Branches:
 - *master* - a stable production-ready branch.
 - *release* - a stable release branch.
 
-Workflow:
-- Developers work on a feature using it's own feature branch. When the feature is completed a responsible developer merges the feature branch to *development* branch.
-- All features that are deployed and verified on CI environment are merged to master branch using a special schedule.
-- All features that are deployed to CI environment are merged to the release branch according to a release schedule.  
+## Development Workflow
+- Developers work on a feature using it's own feature branch.
+- When the feature is completed a responsible developer merges the feature branch to *development* branch.
+- When the feature is tested and verified by QA on Continuous Integration environment the feature changes are merged to master branch.
+- When the feature is tested and verified by the UAT acceptance group the feature changes are merged to the release branch.  
 
 Fork this repository to create your own copy that you will use in this program. 
 
