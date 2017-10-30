@@ -74,7 +74,7 @@ Please, use your own prefix name instead of *my* to avoid name conflicts.
 
 7. View diagnostics logs:
 	* Open "Diagnostics logs" and enable filesystem application logging (Information level), web server logging, and detailed error messages. ([Learn about troubleshooting a web app in Azure](https://docs.microsoft.com/en-us/azure/app-service/web-sites-dotnet-troubleshoot-visual-studio).)
-	* Open "Log stream" go to "Application logs" and run API tests. - bo results?
+	* Open "Log stream" go to "Application logs" and run API tests. - no results?
 	* Open "Log stream", go to "Web server logs" and run API tests. (["Enable diagnostics logging"](https://docs.microsoft.com/en-us/azure/app-service/web-sites-enable-diagnostic-log).) - no results?
 
 8. View detailed information about processes:
