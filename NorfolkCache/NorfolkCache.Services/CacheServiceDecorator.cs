@@ -9,12 +9,12 @@ namespace NorfolkCache.Services
 
         public CacheServiceDecorator(ICacheService cacheService)
         {
-            if (cacheService == null)
-            {
-                throw new ArgumentNullException(nameof(cacheService));
-            }
+            //if (cacheService == null)
+            //{
+                
+            //}
 
-            _cacheService = cacheService;
+            _cacheService = cacheService ?? throw new ArgumentNullException(nameof(cacheService));
         }
 
         public virtual void Clear()
