@@ -80,23 +80,30 @@ Please, use your own prefix name instead of *my* to avoid name conflicts.
 	* Use REST API to get information about a specific process - https://my-norfolk-cache-ci.scm.azurewebsites.net/api/diagnostics/processes/process-id.
 
 8. View diagnostics logs:
-	* Open "Diagnostics logs" and enable filesystem application logging (Information level), web server logging, and detailed error messages. ([Learn about troubleshooting a web app in Azure](https://docs.microsoft.com/en-us/azure/app-service/web-sites-dotnet-troubleshoot-visual-studio).)
-	* Open "Log stream" go to "Application logs" and run API tests. - no results?
-	* Open "Log stream", go to "Web server logs" and run API tests. (["Enable diagnostics logging"](https://docs.microsoft.com/en-us/azure/app-service/web-sites-enable-diagnostic-log).) - no results?
+	* Open "Diagnostics logs" and enable filesystem application (Information level) and web server logging, and detailed error messages. ([Learn about troubleshooting a web app in Azure](https://docs.microsoft.com/en-us/azure/app-service/web-sites-dotnet-troubleshoot-visual-studio).)
+	* Open "Log stream" go to "Application logs" and run API tests.
+
+```
+2017-10-31T12:44:39  PID[5944] Information CacheService.TryGet() enter
+2017-10-31T12:44:39  PID[5944] Information CacheService.TryGet() exit
+2017-10-31T12:44:39  PID[5944] Information CacheService.TryGetNamespaceKeys() enter
+2017-10-31T12:44:39  PID[5944] Information CacheService.TryGetNamespaceKeys() exit
+...
+```
+
+	* Open "Log stream", go to "Web server logs" and run API tests. (["Enable diagnostics logging"](https://docs.microsoft.com/en-us/azure/app-service/web-sites-enable-diagnostic-log).)
 	* Open Kudu, download a web app diagnostic dump using Tools->Diagnostic dump.
 
-9. Restarting web app.
+9. Restarting the web app:
 	* Run API tests, and open the web app url.
 	* Restart the app, and open the web app url.
 	* Run API tests, and open the web app url.
 	* Kill IIS w3wp process, and open url.
-	* Run API tests, and open the web app url.
-	* Kill Kudu w3wp process and open web app url.
 
 10. Using console:
 	* Open "Console" and go to D:\home\site\wwwroot folder. Create a new "my-test" folder.
-	* Open CMD Debug Console in an another browser tab and go to D:\home\site\wwwroot folder. Find "my-test" folder in the current folder.
-	* Print web app configuration file:
+	* Open CMD Debug Console from Kudu console in an another browser tab and go to D:\home\site\wwwroot folder. Find "my-test" folder in the current folder.
+	* Print the web app configuration file:
 ```sh
 $ type Web.config
 ```
@@ -115,7 +122,7 @@ $ type Web.config
 
 13. Export Azure Resource Manager template:
 	* Open "Automation script" for *my-norfolk-cache* resource group.
-	* Send *parameters.json* file to your mentor.
+	* Send *template.json* file to your mentor.
 
 13. Setup performance testing for UAT environment:
 	* Enable Performance Test (VSTS account is needed). Test parameters:
