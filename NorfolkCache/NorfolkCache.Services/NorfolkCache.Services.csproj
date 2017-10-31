@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CacheService.cs" />
+    <Compile Include="CacheServiceDecorator.cs" />
+    <Compile Include="CacheServiceTraceLog.cs" />
     <Compile Include="DumpExceptionLog.cs" />
     <Compile Include="ExceptionLog.cs" />
     <Compile Include="ICacheService.cs" />

@@ -34,7 +34,11 @@ namespace NorfolkCacheWebApp
             builder.RegisterModelBinders(typeof(HomeController).Assembly);
 
             // Register instances.
-            builder.RegisterType<CacheService>().As<ICacheService>().SingleInstance();
+            var cache = new CacheService();
+            var log = new CacheServiceTraceLog(cache);
+            builder.RegisterInstance(log).As<ICacheService>().SingleInstance();
+
+            //builder.RegisterType<CacheService>().As<ICacheService>().SingleInstance();
 
             // Set the dependency resolver to be Autofac.
             var container = builder.Build();
