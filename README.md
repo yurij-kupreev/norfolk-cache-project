@@ -122,9 +122,9 @@ $ type Web.config
 
 13. Export Azure Resource Manager template:
 	* Open "Automation script" for *my-norfolk-cache* resource group.
-	* Send *template.json* file to your mentor.
+	* Send *template.json* (rename to Abigail.json) file to your mentor.
 
-13. Setup performance testing for UAT environment:
+14. Setup performance testing for UAT environment:
 	* Enable Performance Test (VSTS account is needed). Test parameters:
 		* Url: http://my-norfolk-cache-uat.azurewebsites.net/api/cache/namespaces
 		* Performance Test name: PerfTestMyNorfolkCacheUat.
@@ -136,7 +136,15 @@ $ type Web.config
 	* Open "Performance test" and on the test run - you will get on the same page.
 	* Open your VSTS account, click on "Test" menu item, then "Load test".
 
-14. Delete *my-norfolk-cache* resource group.
+15. Export the resource group ARM template, and send it (AbigailPerf.json) to your mentor.
+
+16. Verify your pipeline by introducing a new change that is easy to observe on the web app UI.
+	* Commit to *development* branch, observe changes on CI environment.
+	* Merge changes to *master* branch, observe changes on UAT environment.
+	* Inspect results of your latest performance test.
+	* Merge changes to *release* branch, observe changes on Production environment.
+
+17. Delete *my-norfolk-cache* resource group.
 
 
 ## Questions
