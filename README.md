@@ -112,15 +112,15 @@ Please, use your own prefix name instead of *my* to avoid name conflicts.
 $ type Web.config
 ```
 
-11. Setup deployment for *my-norfolk-cache-uat* web app.
-	* Use Github's **master** branch.
-	* Enable application logging, Warning level. Use filesystem as a storage.
+11. Setup *my-norfolk-cache-uat* web app.
+	* Use Github's **master** branch for deployment.
+	* Enable application (Warning, filesystem) and web server logging.
 	* Review web app quotas.
 	* Run API tests for this environment.
 
-12. Setup deployment for *my-norfolk-cache* web app.
-	* Use Github's **release** branch.
-	* Enable application logging, Error level. Use blob as a storage (applogs and webserverlogs are containers for application and server logs accordingly).
+12. Setup *my-norfolk-cache* web app.
+	* Use Github's **release** branch for deployment.
+	* Enable application logging (Error) and web server logging. Use *mynorfolkcachelogs* blob as a storage (use *applogs* and *webserverlogs* as a container names for application and server logs).
 	* Review web app quotas.
 	* Run API tests for this environment.
 
@@ -169,7 +169,7 @@ $ type Web.config
 
 8. Open "Deployment option" for *release* slot, and sync the slot deployment. Make sure that [release](https://my-norfolk-cache-release.azurewebsites.net/) environment is synchronized.
 
-9. Export the resource group ARM template, and sent it (Brooklynn.json) to your mentor.
+9. Export the resource group ARM template, and sent *template.json* (Brooklynn.json) to your mentor.
 
 10. Delete *my-norfolk-cache* resource group.
 
