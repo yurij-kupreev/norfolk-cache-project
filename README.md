@@ -20,8 +20,11 @@ Fork this repository to create your own copy that you will use in this program.
 - **master** - a stable production-ready branch for UAT environment.
 - **release** - a stable release branch for Production environment.
 
+Learn more about ["Environments in Release Management"](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/environments).
+
 
 ## Development Workflow
+
 - Developers work on a feature using it's own feature branch.
 - When the feature is completed a responsible developer merges the feature branch to **development** branch.
 - When the feature is tested and verified by QA on Continuous Integration environment the feature changes are merged to master branch.
@@ -45,6 +48,7 @@ $ npm tests
 
 
 # 1. Practical Task "Web Apps"
+
 The goal of this task is to create a set of App Services for three different environments:
 - *my-norfolk-cache-ci* - a unstable CI environment with the latest version of **development** branch.
 - *my-norfolk-cache-uat* - a stable UAT environment with the latest version of **master** branch.
@@ -80,7 +84,7 @@ Please, use your own prefix name instead of *my* to avoid name conflicts.
 	* Use REST API to get information about a specific process - https://my-norfolk-cache-ci.scm.azurewebsites.net/api/diagnostics/processes/process-id.
 
 8. View diagnostics logs:
-	* Open "Diagnostics logs" and enable filesystem application (Information level) and web server logging, and detailed error messages. ([Learn about troubleshooting a web app in Azure](https://docs.microsoft.com/en-us/azure/app-service/web-sites-dotnet-troubleshoot-visual-studio).)
+	* Open "Diagnostics logs" and enable filesystem application (Information level) and web server logging, and detailed error messages. ([Learn about troubleshooting a web app in Azure](https://docs.microsoft.com/en-us/azure/app-service/web-sites-dotnet-troubleshoot-visual-studio), [Load test](https://docs.microsoft.com/en-us/vsts/load-test/app-service-web-app-performance-test).)
 	* Open "Log stream" go to "Application logs" and run API tests.
 
 ```
@@ -165,7 +169,9 @@ $ type Web.config
 
 8. Open "Deployment option" for *release* slot, and sync the slot deployment. Make sure that [release](https://my-norfolk-cache-release.azurewebsites.net/) environment is synchronized.
 
-7. Export the resource group ARM template, and sent it (Brooklynn.json) to your mentor.
+9. Export the resource group ARM template, and sent it (Brooklynn.json) to your mentor.
+
+10. Delete *my-norfolk-cache* resource group.
 
 
 ## Questions
