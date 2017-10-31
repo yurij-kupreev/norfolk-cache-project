@@ -147,6 +147,27 @@ $ type Web.config
 17. Delete *my-norfolk-cache* resource group.
 
 
+## Scenario "Brooklynn"
+
+1. Create a new resource group *my-norfolk-cache*, a new *my-norfolk-cache* web app with new app service plan *my-norfolk-cache-plan* (free tier).
+
+2. Open "Scale up (App Service plan)", and scale the plan up to "S1 Standard". Open "App Service plan" and make sure that those changes are applied.
+
+3. Open "Deployment slots", and add a new slot - *ci*. Setup "Deployment option" for this slot - *development* branch on Github. Run API tests on [this environment](https://my-norfolk-cache-ci.azurewebsites.net/) after deployment.
+
+4. Open "Deployment slots", and add a new slot - *uat*. Setup "Deployment option" for this slot - *master* branch on Github. Run API tests on [this environment](https://my-norfolk-cache-uat.azurewebsites.net/) after deployment.
+
+5. Open "Deployment slots", and add a new slot - *release*. Setup "Deployment option" for this slot - *release* branch on Github. Run API tests on [this environment](https://my-norfolk-cache-release.azurewebsites.net/) after deployment.
+
+6. Open https://my-norfolk-cache.azurewebsites.net, and make sure that this web app is not deployed.
+
+7. Swap *relese* and *production* deployment slots. Check out [release](https://my-norfolk-cache-release.azurewebsites.net/) and [production](https://my-norfolk-cache.azurewebsites.net/) environments to make sure that the slots are swapped.
+
+8. Open "Deployment option" for *release* slot, and sync the slot deployment. Make sure that [release](https://my-norfolk-cache-release.azurewebsites.net/) environment is synchronized.
+
+7. Export the resource group ARM template, and sent it (Brooklynn.json) to your mentor.
+
+
 ## Questions
 
 1. What is a resource group location?
