@@ -53,7 +53,7 @@ The goal of this task is to create a set of App Services for three different env
 Please, use your own prefix name instead of *my* to avoid name conflicts.
 
 
-## Solution 1
+## Scenario "Abigail"
 
 1. Create a new resource group *my-norfolk-cache*. (["Azure Resource Manager"](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview).)
 
@@ -113,6 +113,10 @@ $ type Web.config
 	* Review web app quotas.
 	* Run API tests for this environment.
 
+13. Export Azure Resource Manager template:
+	* Open "Automation script" for *my-norfolk-cache* resource group.
+	* Send *parameters.json* file to your mentor.
+
 13. Setup performance testing for UAT environment:
 	* Enable Performance Test (VSTS account is needed). Test parameters:
 		* Url: http://my-norfolk-cache-uat.azurewebsites.net/api/cache/namespaces
@@ -124,6 +128,8 @@ $ type Web.config
 	* Open "Deployment options" and click on deployment details. Click on "View Log" link for "Performance Test" activity. Learn messages, and test results.
 	* Open "Performance test" and on the test run - you will get on the same page.
 	* Open your VSTS account, click on "Test" menu item, then "Load test".
+
+14. Delete *my-norfolk-cache* resource group.
 
 
 ## Questions
