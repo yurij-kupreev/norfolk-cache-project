@@ -34,6 +34,8 @@ namespace NorfolkCacheWebApp.Controllers
             ViewBag.KeyCount = info.TotalKeys;
             ViewBag.Title = "Norfolk Cache";
 
+            ViewBag.HelloMessage = "Hello from HomeController.";
+
             return View();
         }
     }
